@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ywTFsgLBAujj/XI3fDelkcfo0KrbvGj+n4YAW0oAHbohD3mvceJikktZDItG0owmZZy600YMXv3YEDiUgW5WyQ==",
+  "dgSpecHash": "fE6csljetacbU9dhlYc69uZCUpsPyZIbGAu+kXPIulZG9Tji4TYKLAlZkl69wcJfL3NrEPKn7sVEcaxbLaw/pQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fantasm\\source\\repos\\Practic2(4)_in_WPF\\Practic2(4)_in_WPF\\Practic2(4)_in_WPF.csproj",
+  "projectFilePath": "C:\\Users\\maks3d12\\source\\repos\\Daily\\Practic2(4)_in_WPF\\Practic2(4)_in_WPF.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Fantasm\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\maks3d12\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
   "logs": []
 }

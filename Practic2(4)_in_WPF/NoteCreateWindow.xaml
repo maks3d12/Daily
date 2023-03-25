@@ -5,24 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practic2_4__in_WPF"
         mc:Ignorable="d"
-        Title="NoteCreateWindow" Height="450" Width="800">
+        Title="NoteCreateWindow" Height="193" Width="757" MinHeight="150" MinWidth="300">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="256*"/>
-            <ColumnDefinition Width="93*"/>
-            <ColumnDefinition Width="112*"/>
-            <ColumnDefinition Width="113*"/>
-            <ColumnDefinition Width="226*"/>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="188*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Назад" HorizontalAlignment="Center" Height="40" VerticalAlignment="Center" Width="82" Click="Button_Click" Grid.Column="3"/>
-        <Button x:Name="Save" Content="Сохранить" HorizontalAlignment="Center" Height="42" VerticalAlignment="Center" Width="96" Click="SaveNote" Grid.Column="4"/>
-        <TextBox x:Name="NameNote" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Width="193" RenderTransformOrigin="1.198,-2.402" Height="40" TextChanged="TextBox_TextChanged" Text="Название" Grid.Column="0" Margin="10,0,0,0"/>
-        <DatePicker x:Name="DateNote" HorizontalAlignment="Center" VerticalAlignment="Center" SelectedDateFormat="Short" Grid.Column="2" Height="38" Width="100"/>
-        <TextBox x:Name="Bank_Text" HorizontalAlignment="Left" Height="293" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="Bank_Text_TextChanged" Text="Содержимое" Grid.Column="0" Grid.Row="1"/>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45px"/>
+                <RowDefinition Height="45px"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" x:Name="Save" Content="Сохранить" VerticalAlignment="Top" Height="40" Click="SaveNote"/>
+            <Button Grid.Row="1" Content="Назад" Height="40" Click="Button_Click"/>
+        </Grid>
+        <DatePicker x:Name="DateNote" SelectedDateFormat="Short" Grid.Column="1"/>
+
+        <TextBox x:Name="NameNote" VerticalAlignment="Top" Height="40" Text="Название"/>
+        <TextBox x:Name="Bank_Text" Text="Содержимое" Grid.Row="1"/>
 
     </Grid>
 </Window>

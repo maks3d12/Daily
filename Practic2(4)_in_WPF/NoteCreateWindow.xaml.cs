@@ -15,7 +15,7 @@ namespace Practic2_4__in_WPF
             InitializeComponent();
         }
         List<Note> notes = new List<Note>();
-        string path = "C:\\Users\\Fantasm\\Desktop\\Example\\Notes.json";
+        string path = @"Notes.json";
         public void Create()
         {
             string Bank = Bank_Text.Text;
@@ -25,22 +25,30 @@ namespace Practic2_4__in_WPF
             {
                 if (SerealizedorDeserealized.a != true)
                 {
-                date = Convert.ToDateTime(DateNote.Text);
-                string date1 = date.ToShortDateString();
-                Note note = new Note(name, Bank, date1);
-                notes.Add(note);
-                SerealizedorDeserealized.MySerialize(path, notes);
-                MessageBox.Show($"Заметка {name} создана");
+                    date = Convert.ToDateTime(DateNote.Text);
+                    string date1 = date.ToShortDateString();
+                    Note note = new Note(name, Bank, date1);
+                    notes.Add(note);
+                    SerealizedorDeserealized.MySerialize(path, notes);
+                    MessageBox.Show($"Заметка {name} создана");
                 }
                 else
                 {
                     MessageBox.Show($"Заметка {name} измененена");
                 }
             }
-            catch (Exception ex) 
-            {   
-                MessageBox.Show("Вы не ввели дату, попробуйте еще раз"); }
+            catch (Exception) 
+            {
+                MessageBox.Show("Вы не ввели дату, попробуйте еще раз");
             }
+
+        }
+            
+
+    
+
+
+
 
         public void Delete()
         {

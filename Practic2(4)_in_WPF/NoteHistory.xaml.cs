@@ -30,7 +30,7 @@ namespace Practic2_4__in_WPF
 
         List<Note> notes = new List<Note>();
         List<string> names_notes = new List<string>();
-        string path = "C:\\Users\\Fantasm\\Desktop\\Example\\Notes.json";
+        string path = "Notes.json";
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             notes = SerealizedorDeserealized.MyDeserialize<List<Note>>(path);

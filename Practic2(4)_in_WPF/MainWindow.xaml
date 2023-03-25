@@ -5,28 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Practic2_4__in_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="344">
-    <Grid HorizontalAlignment="Center" Width="344">
+        Title="MainWindow" Height="170" Width="388" MinHeight="150" MinWidth="350" MaxHeight="270" MaxWidth="500">
+    <Grid >
         <Grid.RowDefinitions>
-            <RowDefinition Height="80*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="99"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Созать заметку" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Create_New_Note" Height="50" Width="194" Margin="0,0,0,88"/>
-        <Button Content="Посмотреть заметки" HorizontalAlignment="Center" Height="49" Margin="0,12,0,0" VerticalAlignment="Top" Width="196" Click="Secret_Note_Click" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.224"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
+
+        <Button Content="Создать заметку" VerticalAlignment="Top" Click="Create_New_Note" Height="50" Margin="30,0,30,0"/>
+        <Button Content="Посмотреть заметки" Margin="30,10,30,0" Height="50" VerticalAlignment="Center" Click="Secret_Note_Click" Grid.Row="1"/>
 
     </Grid>
 </Window>

@@ -6,25 +6,27 @@
         xmlns:local="clr-namespace:Practic2_4__in_WPF"
         mc:Ignorable="d"
         Title="NoteHistory" Height="450" Width="487">
-    <Grid HorizontalAlignment="Left" Width="477">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="57*"/>
-            <RowDefinition Height="78*"/>
-            <RowDefinition Height="41*"/>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="130*"/>
-            <RowDefinition Height="62*"/>
-        </Grid.RowDefinitions>
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="160*"/>
-            <ColumnDefinition Width="317*"/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Показать таблицу" HorizontalAlignment="Left" Height="22" Margin="24,14,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click" Grid.Row="2"/>
-        <ListBox x:Name="table" Height="291" Margin="14,19,0,0" VerticalAlignment="Top" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListBox_SelectionChanged" HorizontalAlignment="Left" Width="278" Grid.Column="1" Grid.RowSpan="4" Grid.Row="1"/>
-        <Button Content="Удалить" HorizontalAlignment="Center" Height="23" VerticalAlignment="Center" Width="126" Click="Button_Click_1" Grid.Row="3"/>
-        <Button Content="Назад" HorizontalAlignment="Left" Height="24" Margin="24,36,0,0" VerticalAlignment="Top" Width="126" Click="Button_Click_2" Grid.Row="1"/>
+        
+        <ListBox x:Name="table" SelectionChanged="ListBox_SelectionChanged"  Grid.Column="1"/>
 
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40px"/>
+                <RowDefinition Height="40px"/>
+                <RowDefinition Height="40px"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="Показать таблицу"  Height="30"    Click="Button_Click"/>
+            <Button Grid.Row="1" Content="Удалить"  Height="30"  Click="Button_Click_1"/>
+            <Button Grid.Row="2"  Content="Назад"  Height="30"  Click="Button_Click_2" />
+
+        </Grid>
+        
     </Grid>
 </Window>
